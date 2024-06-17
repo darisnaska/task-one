@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage New Header V3</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #d5ecef;
+            padding: 10px 20px;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: rgb(5, 5, 5);
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links .search-item {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-form {
+            text-align: center;
+        }
+
+        .search-form input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: rgb(15, 15, 15);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropbtn {
+            background-color: #fff;
+            color: rgb(12, 12, 12);
+            padding: 14px 16px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #090909;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            justify-content: space-between;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #fff;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px; 
+            height: 50vh; 
+        }
+
+        .picture1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            
+        }
+
+        .picture2 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            height:50vh;
+            width: 700px;
+        }
+
+        .picture3 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            height:25vh;
+            width: 800px;
+        }
+
+        .picture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 1500px;
+            /*height: 00px;*/
+        }
+
+        .flex-container img {
+            max-width: 100px; /* Adjust as needed */
+            height: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .grid-container1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 10px; 
+            width: 80%; 
+            margin: 0 auto; 
+            justify-content: space-between;
+        }
+
+        .p1, .p2, .p3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           /* border: 1px solid #ccc; */
+            overflow: hidden; 
+            background-color: #fff;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px; /* Adjust height as needed */
+        }
+
+        .center img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Wholesale - Pros Only</a></li>
+            <li><a href="#"> Retail</a></li>
+
+            <li class="search-item">
+                <form class="search-form">
+                    <input type="text" placeholder="Search by name, category..." name="search">
+                </form>
+            </li>
+
+            <li><a href="#">Community</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  Account</a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;                    Cart</a></li>
+        </ul>
+    </nav>
+
+    <ul>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Body Jewelry&nbsp;˅&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Piercing&nbsp;˅&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Tattoo&nbsp;˅&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Medical&nbsp;˅&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Studio&nbsp;˅&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Permanent Makeup&nbsp;˅&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+    </ul>
+
+    <div class="grid-container">
+        <div class="picture picture1">
+            <img src="picture 1.png" >
+        </div>
+        <div class="picture picture2">
+            <img src="picture 2.png">
+        </div>
+        <div class="picture picture3">
+            <img src="picture 3.png">
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <img src="tattoo suplier.png">
+        <img src="body jewelry.png">
+        <img src="piercing supplies.png">
+        <img src="medical supplies.png">
+        <img src="permanent makeup.png">
+    </div>
+
+    <h3 align="center">FROM OUR COMMUNITY</h3>
+
+    <div class="grid-container1">
+        <div class="picture p1">
+            <img src="1.png">
+        </div>
+        <div class="picture p2">
+            <img src="2.png">
+        </div>
+        <div class="picture p3">
+            <img src="3.png">
+        </div>
+    </div>
+
+    <div class="center">
+        <img src="button.png">
+    </div>
+
+    <img src="last.png">
+
+</body>
+</html>

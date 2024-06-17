@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage New Header V3</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Your existing CSS styles */
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Wholesale - Pros Only</a></li>
+            <li><a href="#"> Retail</a></li>
+            <li class="search-item">
+                <form class="search-form" onsubmit="return handleSearch(event)">
+                    <input type="text" id="searchInput" placeholder="Search by name, category..." name="search">
+                </form>
+            </li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; Account</a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; Cart</a></li>
+        </ul>
+    </nav>
+
+    <ul>
+        <li class="dropdown" onclick="toggleDropdown(this)">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Body Jewelry&nbsp;˅&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown" onclick="toggleDropdown(this)">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Piercing&nbsp;˅&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown" onclick="toggleDropdown(this)">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Tattoo&nbsp;˅&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown" onclick="toggleDropdown(this)">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Medical&nbsp;˅&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown" onclick="toggleDropdown(this)">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Studio&nbsp;˅&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li class="dropdown" onclick="toggleDropdown(this)">
+            <a href="#" class="dropbtn">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Permanent Makeup&nbsp;˅&nbsp; &nbsp; &nbsp;</a>
+            <div class="dropdown-content"></div>
+        </li>
+    </ul>
+
+    <div class="grid-container">
+        <div class="picture picture1">
+            <img src="picture 1.png" alt="Picture 1">
+        </div>
+        <div class="picture picture2">
+            <img src="picture 2.png" alt="Picture 2">
+        </div>
+        <div class="picture picture3">
+            <img src="picture 3.png" alt="Picture 3">
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <img src="tattoo suplier.png" alt="Tattoo Supplier">
+        <img src="body jewelry.png" alt="Body Jewelry">
+        <img src="piercing supplies.png" alt="Piercing Supplies">
+        <img src="medical supplies.png" alt="Medical Supplies">
+        <img src="permanent makeup.png" alt="Permanent Makeup">
+    </div>
+
+    <h3 align="center">FROM OUR COMMUNITY</h3>
+
+    <div class="grid-container1">
+        <div class="picture p1">
+            <img src="1.png" alt="Community Picture 1">
+        </div>
+        <div class="picture p2">
+            <img src="2.png" alt="Community Picture 2">
+        </div>
+        <div class="picture p3">
+            <img src="3.png" alt="Community Picture 3">
+        </div>
+    </div>
+
+    <div class="center">
+        <img src="button.png" alt="Center Button">
+    </div>
+
+    <img src="last.png" alt="Last Image">
+
+    <script>
+        // Function to toggle dropdown content
+        function toggleDropdown(element) {
+            element.querySelector('.dropdown-content').classList.toggle('show');
+        }
+
+        // Function to handle search submission
+        function handleSearch(event) {
+            event.preventDefault();
+            let searchInput = document.getElementById('searchInput').value;
+            // Implement your search logic here (e.g., redirect, show results, etc.)
+            console.log('Search Query:', searchInput);
+            return false; // Prevent form submission
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                let dropdowns = document.getElementsByClassName('dropdown-content');
+                for (let dropdown of dropdowns) {
+                    if (dropdown.classList.contains('show')) {
+                        dropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
